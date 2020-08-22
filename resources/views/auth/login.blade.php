@@ -1,8 +1,4 @@
-@extends('layouts.admin.master')
-
-@section('classes_body', 'login-page')
-
-@section('body')
+<x-admin-master-layout classes_body="login-page">
     <div class="login-box">
         <div class="login-logo">
             {{ config('app.name', 'Laravel') }}
@@ -57,4 +53,4 @@
             </div>
         </div>
     </div>
-@stop
+</x-admin-master-layout>

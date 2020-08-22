@@ -10,12 +10,12 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    @stack('css')
+    {{ $css ?? '' }}
 </head>
-<body class="@yield('classes_body')">
-    @yield('body')
+<body class="{{ $classesBody }}">
+    {{ $slot }}
 
     <script src="{{ mix('js/app.js') }}"></script>
-    @stack('js')
+    {{ $javascript ?? '' }}
 </body>
 </html>
